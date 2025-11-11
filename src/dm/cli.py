@@ -2,6 +2,7 @@ import click
 import pandas as pd
 import numpy as np
 from apriori import apriori
+from preprocess import preprocess
 
 @click.group()
 def root():
@@ -19,6 +20,7 @@ def hello(count, surname,midname, name):
 
 root.add_command(hello)
 root.add_command(apriori)
+root.add_command(preprocess)
 
 if __name__ == "__main__":
     root()
